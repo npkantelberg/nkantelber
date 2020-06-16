@@ -14,7 +14,6 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-
 if (!isset($content_width))
 {
     $content_width = 900;
@@ -123,14 +122,20 @@ function html5blank_styles()
 }
 
 // Register HTML5 Blank Navigation
-function register_html5_menu()
-{
-    register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
-    ));
-}
+// function register_html5_menu()
+// {
+//     register_nav_menus(array( // Using array to specify more menus if needed
+//         'header-menu' => __('Main Menu', 'Main Menu'), // Main Navigation
+//         'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
+//         'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+//     ));
+// }
+function register_my_menu() {
+    register_nav_menu('main-menu',__( 'Main Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );
+
+  
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 function my_wp_nav_menu_args($args = '')
