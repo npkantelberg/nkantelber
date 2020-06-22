@@ -39,6 +39,16 @@ $(document).ready(function(){
 		$('.header').toggleClass('header-active');
 		e.preventDefault();
 	});
+	$('.about-page-contact').on('click', function(e){
+		$('.about-wrapper').toggleClass('active');
+		$('.hero-half-left').toggleClass('hero-half-left-active');
+		$('.hero-half-right').toggleClass('hero-half-right-active');
+
+		setTimeout(function(){ 
+			$('#menu-main-menu .contact').click();
+		}, 1000);
+		e.preventDefault();
+	});
 	$('#menu-main-menu .work').on('click', function(e){
 		$('.previous-work-wrapper').toggleClass('active');
 		$('.hero-half-left').toggleClass('hero-half-left-active');
@@ -50,7 +60,7 @@ $(document).ready(function(){
 		$('.contact-wrapper').toggleClass('active');
 		$('.hero-half-left').toggleClass('hero-half-left-active');
 		$('.hero-half-right').toggleClass('hero-half-right-active');
-		$('.header').toggleClass('header-active');
+		$('.header').addClass('header-active');
 		e.preventDefault();
 	});
 })
