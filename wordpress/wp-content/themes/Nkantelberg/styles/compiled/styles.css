@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+  overflow: hidden; }
+
 div.wrapper {
   max-width: 1920px;
   width: 100%; }
@@ -101,7 +105,11 @@ div.wrapper {
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      overflow: scroll; }
+      .main-wrapper .inner-section .homepage-content-wrapper .homepage-content-inner {
+        margin-bottom: 70px;
+        padding-top: 120px; }
     .main-wrapper .inner-section .contact-wrapper {
       height: 100vh;
       width: 100%;
@@ -122,56 +130,57 @@ div.wrapper {
     .main-wrapper .inner-section .previous-work-wrapper {
       transition: .7s all ease-in-out;
       opacity: 0;
-      z-index: 1;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      background: #222;
-      padding-top: 120px;
-      flex-wrap: wrap; }
-      .main-wrapper .inner-section .previous-work-wrapper .project-wrapper {
-        overflow: hidden;
-        width: 250px;
-        height: 250px;
-        background: #fff;
-        margin: 15px;
-        position: relative; }
-        .main-wrapper .inner-section .previous-work-wrapper .project-wrapper:hover .project-box {
-          transition: .5s all;
-          filter: grayscale(100%); }
-        .main-wrapper .inner-section .previous-work-wrapper .project-wrapper:hover span {
-          background: #00adee;
-          transition: .5s all; }
-        .main-wrapper .inner-section .previous-work-wrapper .project-wrapper .project-box {
-          height: 100%;
-          width: 100%;
-          position: relative;
-          text-align: center;
-          background-size: cover;
-          transition: .5s all;
-          display: block;
-          filter: grayscale(0); }
-          .main-wrapper .inner-section .previous-work-wrapper .project-wrapper .project-box.salon177 {
-            background: url("../../images/projects/salon177.jpg") no-repeat center center; }
-          .main-wrapper .inner-section .previous-work-wrapper .project-wrapper .project-box.dicks {
-            background: url("../../images/projects/dicks.jpg") no-repeat center center; }
-          .main-wrapper .inner-section .previous-work-wrapper .project-wrapper .project-box.amanda {
-            background: url("../../images/projects/amanda.jpg") no-repeat center center; }
-        .main-wrapper .inner-section .previous-work-wrapper .project-wrapper span {
-          background: rgba(0, 0, 0, 0.8);
-          color: #fff;
-          width: 100%;
-          padding: 10px 25px;
-          font-size: 24px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: auto;
-          text-align: center;
-          transition: .5s all; }
+      z-index: 1; }
+      .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background: #222;
+        padding-top: 120px;
+        flex-wrap: wrap; }
+        .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper {
+          overflow: hidden;
+          width: 250px;
+          height: 250px;
+          background: #fff;
+          margin: 15px;
+          position: relative; }
+          .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper:hover .project-box {
+            transition: .5s all;
+            filter: grayscale(100%); }
+          .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper:hover span {
+            background: #00adee;
+            transition: .5s all; }
+          .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper .project-box {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            background-size: cover;
+            transition: .5s all;
+            display: block;
+            filter: grayscale(0); }
+            .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper .project-box.salon177 {
+              background: url("../../images/projects/salon177.jpg") no-repeat center center; }
+            .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper .project-box.dicks {
+              background: url("../../images/projects/dicks.jpg") no-repeat center center; }
+            .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper .project-box.amanda {
+              background: url("../../images/projects/amanda.jpg") no-repeat center center; }
+          .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner .project-wrapper span {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 100%;
+            padding: 10px 25px;
+            font-size: 24px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+            text-align: center;
+            transition: .5s all; }
       .main-wrapper .inner-section .previous-work-wrapper.active {
         transition: .7s all ease-in-out;
         opacity: 1;
@@ -188,7 +197,7 @@ div.wrapper {
       color: #ddd; }
       .main-wrapper .inner-section .about-wrapper .about-inner {
         max-width: 767px;
-        margin: 0 auto;
+        margin: 0 auto 70px auto;
         text-align: center;
         font-size: 16px;
         background: #333;
@@ -201,3 +210,20 @@ div.wrapper {
         transition: .7s all ease-in-out;
         opacity: 1;
         z-index: 2; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #333333;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; }
+  .footer p {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px; }
