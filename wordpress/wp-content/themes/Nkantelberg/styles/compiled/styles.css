@@ -120,6 +120,9 @@ div.wrapper {
       transition: .7s all ease-in-out;
       opacity: 0;
       z-index: 1; }
+      .main-wrapper .inner-section .contact-wrapper .homepage-content-inner {
+        padding-right: 10px;
+        padding-left: 10px; }
       .main-wrapper .inner-section .contact-wrapper div.wpforms-container-full .wpforms-form .wpforms-field-sublabel,
       .main-wrapper .inner-section .contact-wrapper div.wpforms-container-full .wpforms-form .wpforms-field-label {
         color: #fff; }
@@ -130,9 +133,9 @@ div.wrapper {
     .main-wrapper .inner-section .previous-work-wrapper {
       transition: .7s all ease-in-out;
       opacity: 0;
-      z-index: 1; }
+      z-index: 1;
+      background: #222; }
       .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner {
-        height: 100vh;
         width: 100%;
         display: flex;
         align-items: flex-start;
