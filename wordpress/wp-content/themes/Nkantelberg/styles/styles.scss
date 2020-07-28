@@ -6,6 +6,7 @@ $primary: #00adee;
 body{
   height: 100vh;
   overflow: hidden;
+  background: #333;
 }
 
 div.wrapper{
@@ -23,27 +24,24 @@ div.wrapper{
 .home{
   .header{
     position: absolute;
-    top: 25%;
+    top: 2.5%;
     left: 0;
     right: 0;
     z-index: 101;
     display: flex;
     justify-content: center;
-    max-width: 300px;
     margin: 0 auto;
     flex-wrap: wrap;
     transition: .7s all ease-in-out;
     align-items: center;
+    width: auto;
     &.header-active{
-      top: 0;
       transition: .7s all ease-in-out;
       justify-content: center;
       .nav{
         transition: .7s all ease-in-out;
         height: 55px;
-        padding-top: 0px;
         margin-top: 0px;
-        margin-left: 10px;
         .menu{
           .menu-item{
             opacity: 0;
@@ -55,44 +53,174 @@ div.wrapper{
         }
       }
       .logo{
-        flex: 1;
         transition: .7s ease-in-out all;
+        .logo-img{
+          filter: none;
+          transition: .7s ease-in-out all;
+        }
       }
     }
     .logo {
       display: flex;
-      flex: 1 1 100%;
+      flex: 0 1 auto;
       justify-content: center;
       transition: .7s ease-in-out all;
+      margin-right: 15px;
       .logo-img {
         width: 150px;
+        max-width: 150px;
+        filter: drop-shadow(7px 7px 5px #333);
+        transition: .7s ease-in-out all;
       }
     }
     .nav{
       background: #333;
       border-radius: 5px;
       padding: 10px 25px;
-      margin-top: 15px;
-      height: 175px;
       transition: .7s all ease-in-out;
       overflow: hidden;
       text-align: center;
+      margin-top: 0px;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      max-width: 767px;
+      transition: .7s ease-in-out all;
       .menu{
         padding: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0px;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        width: 100%;
+        flex: 1;
         .menu-item{
           list-style-type: none;
           opacity: 1;
           transition: .3s all ease-in-out;
+          width: 150px;
+          height: 33px;
+          overflow-y: hidden;
           &.home{
             opacity: 1;
           }
           a{
             font-size: 24px;
             color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
           }
         }
       }
     }   
+  }
+}
+@media(max-width: 1024px) and (min-width: 768px){
+  .home{
+    .header{
+      .nav{
+        max-width: 500px;
+        .menu{
+          .menu-item{
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+              font-size: 15px;
+              transition: .7s ease-in-out all;
+            }
+          } 
+        } 
+      } 
+    } 
+    .header.header-active{
+      .nav{
+        .menu{
+          .menu-item{
+            a{
+              font-size: 24px;
+              transition: .7s ease-in-out all;
+            }
+          }
+        }
+      }   
+    }
+  } 
+}
+@media(min-width: 768px){
+  .home{
+    .header.header-active{
+      top: 10px;
+      .logo{
+        flex: 0 1 auto;
+        .logo-img {
+          margin-top: 0px;
+          max-width: 100px;
+        }
+      }
+      .nav{
+        padding-top: 10px;
+        max-width: 200px;
+        .menu{
+          flex: 0 1 auto;
+          .menu-item{
+            width: 150px;
+          }
+          .menu-item:not(.home) {
+            width: 0px;
+          }
+        }
+      }
+    }
+  }    
+}
+@media(max-width: 767px){
+  .home{
+    .header{
+      top: 20%;
+      max-width: 200px;
+      .nav{
+        padding: 25px 25px;
+        height: 184.5px;
+        max-width: 200px;
+        margin-top: 20px;
+        transition: .7s ease-in-out all;
+        .menu{
+          flex-wrap: wrap;
+          margin-top: 0px;
+          transition: .7s ease-in-out all;
+          .menu-item {
+            width: 100%;
+          }
+        }
+      }
+      .logo {
+        margin-right: 0px;
+      }
+      &.header-active{
+        top: 0;
+        .logo{
+          .logo-img {
+            max-width: 50px;
+            margin: 8px 0px;
+            transition: .7s ease-in-out all;
+          }
+        } 
+        .nav{
+          height: 40px;
+          padding: 0;
+          transition: .7s ease-in-out all;
+          .menu {
+            margin-top: 100px;
+            transition: .7s ease-in-out all;
+          }
+        } 
+      }
+    }
   }
 }
 // End Header Section

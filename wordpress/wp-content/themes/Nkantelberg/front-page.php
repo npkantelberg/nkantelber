@@ -18,7 +18,7 @@
             <span>Amanda Lea Photography</span>
           </div>
           <div class="project-wrapper">
-            <a href="" class="project-box dicks">
+            <a href="https://dicksdrive-in.com/" class="project-box dicks">
             </a>
             <span>Dicks Drive-In</span>
           </div>
