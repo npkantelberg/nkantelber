@@ -52,7 +52,7 @@ div.wrapper {
       filter: drop-shadow(7px 7px 5px #333);
       transition: .7s ease-in-out all; }
   .home .header .nav {
-    background: #333;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 10px 25px;
     transition: .7s all ease-in-out;
@@ -105,6 +105,11 @@ div.wrapper {
     font-size: 24px;
     transition: .7s ease-in-out all; } }
 
+.home .logo {
+  max-width: 150px; }
+  .home .logo svg {
+    width: 100%; }
+
 @media (min-width: 768px) {
   .home .header.header-active {
     top: 10px; }
@@ -154,6 +159,61 @@ div.wrapper {
         .home .header.header-active .nav .menu {
           margin-top: 100px;
           transition: .7s ease-in-out all; } }
+
+.logo svg .st0,
+.logo svg .st1 {
+  -webkit-animation: dash 7s linear forwards, fill 3s linear forwards;
+  animation: dash 7s linear forwards, fill 3s linear forwards; }
+
+@keyframes fill {
+  0% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0; }
+  10% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.1; }
+  20% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.2; }
+  30% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.3; }
+  40% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.4; }
+  50% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.5; }
+  60% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.6; }
+  70% {
+    fill: RGBA(0, 0, 0, 0.7);
+    -webkit-fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.7; }
+  80% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.8; }
+  90% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 0.9; }
+  100% {
+    fill: RGBA(0, 0, 0, 0.7);
+    fill-opacity: 1; } }
+
+.stroke {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: dash linear forwards;
+  -webkit-animation: dash 1s linear forwards; }
+
+@-webkit-keyframes {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
 
 .main-wrapper {
   height: 100vh;
