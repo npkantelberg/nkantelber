@@ -13,17 +13,17 @@
       <div class="previous-work-wrapper homepage-content-wrapper">
         <div class="homepage-content-inner">
           <div class="project-wrapper">
-            <a href="http://amandaleaphotographydev.xyz/" class="project-box amanda">
+            <a target="_blank" href="http://amandaleaphotographydev.xyz/" class="project-box amanda">
             </a>
             <span>Amanda Lea Photography</span>
           </div>
           <div class="project-wrapper">
-            <a href="https://dicksdrive-in.com/" class="project-box dicks">
+            <a target="_blank" href="https://dicksdrive-in.com/" class="project-box dicks">
             </a>
             <span>Dicks Drive-In</span>
           </div>
           <div class="project-wrapper">
-            <a href="http://salon177.com/" class="project-box salon177">
+            <a target="_blank" href="http://salon177.com/" class="project-box salon177">
             </a>
             <span>Salon177</span>
           </div>
