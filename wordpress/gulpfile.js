@@ -10,7 +10,7 @@ var sass = require('gulp-sass');
 //   //   .pipe(sass().on('error', sass.logError))
 //   //   .pipe(gulp.dest('wp-content/themes/photography/styles/compiled'));
 // });
- 
+
 gulp.task('sass', function() {
   return gulp.src('wp-content/themes/Nkantelberg/styles/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass())

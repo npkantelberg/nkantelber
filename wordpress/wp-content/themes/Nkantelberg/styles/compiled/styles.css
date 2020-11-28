@@ -115,6 +115,11 @@ div.wrapper {
 .logo svg {
   height: auto; }
 
+.logo a {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
 @media (min-width: 768px) {
   .home .header.header-active {
     top: 10px; }
@@ -383,3 +388,13 @@ div.wrapper {
     display: inline-block;
     padding: 0px;
     margin: 0px; }
+
+@media screen and (max-width: 767px) {
+  _::-webkit-full-page-media, _:future, :root .safari_only {
+    bottom: 104px !important; }
+  _::-webkit-full-page-media, _:future, :root .main-wrapper .inner-section .about-wrapper .about-inner {
+    margin-bottom: 174px !important; }
+  _::-webkit-full-page-media, _:future, :root .main-wrapper .inner-section .previous-work-wrapper .homepage-content-inner {
+    margin-bottom: 174px !important; }
+  _::-webkit-full-page-media, _:future, :root .main-wrapper .inner-section .homepage-content-wrapper .homepage-content-inner {
+    margin-bottom: 174px !important; } }
